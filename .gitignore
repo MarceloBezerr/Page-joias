@@ -1,0 +1,13 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE & Tooling
+.vscode/
+.idea/
+.gemini/
+
+# Temporary files
+*.tmp
+*.log
