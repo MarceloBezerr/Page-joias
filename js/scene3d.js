@@ -8,14 +8,13 @@ class JewelryScene {
     this.container = document.getElementById('webgl-container');
     this.canvas = document.getElementById('webgl-canvas');
     
-    // Modelos 3D Reais
+    // Modelo 3D Exclusivo: Pavé Royale em Ouro 18K
     this.models = {
-      royale: 'models/custom-ring-5.glb',
-      pear: 'models/ring1.glb'
+      royale: 'models/custom-ring-5.glb'
     };
     this.currentModelKey = 'royale';
 
-    // Acabamentos de Metais Nobres
+    // Acabamento Nobre: Ouro 18K
     this.metalFinishes = {
       gold: {
         name: 'Ouro 18K',
@@ -24,22 +23,6 @@ class JewelryScene {
         roughness: 0.16,
         clearcoat: 0.3,
         clearcoatRoughness: 0.08
-      },
-      rose: {
-        name: 'Ouro Rosé',
-        color: 0xc47b6a,
-        metalness: 0.98,
-        roughness: 0.16,
-        clearcoat: 0.3,
-        clearcoatRoughness: 0.08
-      },
-      silver: {
-        name: 'Prata / Platina',
-        color: 0xd2d7df,
-        metalness: 0.96,
-        roughness: 0.14,
-        clearcoat: 0.35,
-        clearcoatRoughness: 0.06
       }
     };
     this.currentMetalKey = 'gold';
@@ -49,7 +32,7 @@ class JewelryScene {
     this.targetScrollProgress = 0;
     this.mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
     
-    // Keyframes cinematográficos sincronizados com o conteúdo da página
+    // Keyframes cinematográficos sincronizados com a página objetiva (Hero -> Boas-vindas -> Catálogo WhatsApp)
     this.keyframes = [
       // 0.0 - Hero: Apresentação majestosa à direita
       {
@@ -57,39 +40,23 @@ class JewelryScene {
         camPos: { x: 0, y: 0.4, z: 5.2 },
         ringRot: { x: 0.48, y: -0.42, z: 0.05 },
         ringPos: { x: 1.25, y: -0.22, z: 0 },
-        ringScale: 0.96
+        ringScale: 0.98
       },
-      // 0.25 - Seção 1 (Design Futurista, card na esquerda): Anel à direita mostrando o aro
-      {
-        progress: 0.25,
-        camPos: { x: 0, y: 0.3, z: 5.0 },
-        ringRot: { x: 0.8, y: 1.1, z: -0.2 },
-        ringPos: { x: 1.25, y: 0.05, z: 0 },
-        ringScale: 1.15
-      },
-      // 0.50 - Seção 2 (Sinta-se Radiante, card na direita): Anel à esquerda mostrando as facetas superiores
+      // 0.50 - Card Boas-Vindas (card na esquerda): Anel à direita em visão macro revelando os diamantes pavé
       {
         progress: 0.50,
-        camPos: { x: 0, y: 0.9, z: 4.8 },
-        ringRot: { x: 0.2, y: 2.7, z: 0.15 },
-        ringPos: { x: -1.25, y: -0.1, z: 0 },
-        ringScale: 1.25
+        camPos: { x: 0, y: 0.45, z: 4.8 },
+        ringRot: { x: 0.65, y: 2.2, z: 0.1 },
+        ringPos: { x: 1.25, y: 0.0, z: 0 },
+        ringScale: 1.22
       },
-      // 0.75 - Seção 3 (Feito para Você, card na esquerda): Anel à direita em visão macro 3/4
-      {
-        progress: 0.75,
-        camPos: { x: 0, y: 0.4, z: 5.0 },
-        ringRot: { x: 0.55, y: 4.3, z: -0.1 },
-        ringPos: { x: 1.2, y: 0.0, z: 0 },
-        ringScale: 1.18
-      },
-      // 1.00 - Catálogo WhatsApp: Centralizado sobre o convite do catálogo
+      // 1.00 - Catálogo WhatsApp: Anel centralizado sobre o card de ação
       {
         progress: 1.00,
         camPos: { x: 0, y: 0.6, z: 5.4 },
         ringRot: { x: 0.4, y: 6.28, z: 0 },
-        ringPos: { x: 0, y: 0.5, z: 0 },
-        ringScale: 1.05
+        ringPos: { x: 0, y: 0.55, z: 0 },
+        ringScale: 1.08
       }
     ];
 
@@ -467,31 +434,7 @@ class JewelryScene {
   }
 
   setupUIControls() {
-    const modelBtns = document.querySelectorAll('.customizer-btn[data-model]');
-    modelBtns.forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const model = btn.getAttribute('data-model');
-        if (model && model !== this.currentModelKey) {
-          modelBtns.forEach((b) => b.classList.remove('active'));
-          btn.classList.add('active');
-          this.loadRingModel(model);
-        }
-      });
-    });
-
-    const metalDots = document.querySelectorAll('.color-dot[data-metal]');
-    metalDots.forEach((dot) => {
-      dot.addEventListener('click', (e) => {
-        e.preventDefault();
-        const metal = dot.getAttribute('data-metal');
-        if (metal && metal !== this.currentMetalKey) {
-          metalDots.forEach((d) => d.classList.remove('active'));
-          dot.classList.add('active');
-          this.setMetalFinish(metal);
-        }
-      });
-    });
+    // A personalização de modelos e metais foi removida a pedido (fixado em Pavé Royale Ouro 18K)
   }
 
   bindEvents() {
