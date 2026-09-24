@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Brillé | Design Futurista & Estilo</title>
+  <meta name="description" content="Acessórios únicos que combinam design futurista e energia positiva. Venha descobrir a peça perfeita para o seu estilo!">
+  <meta name="theme-color" content="#050608">
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ana Brillé | Design Futurista & Estilo">
+  <meta property="og:description" content="Acessórios cheios de personalidade para acompanhar o seu ritmo. Conheça nossa coleção exclusiva.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Progresso no Topo -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cenário Tridimensional e Efeitos de Fundo -->
+  <div id="webgl-container">
+    <canvas id="webgl-canvas"></canvas>
+  </div>
+  <div class="ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- Cabeçalho Fixo -->
+  <header class="site-header">
+    <div class="brand-container">
+      <div class="brand-logo">
+        <img src="assets/logo-monogram.png" alt="Ana Brillé" class="brand-monogram-img">
+        <span class="dynamic-brand-name">Ana Brillé</span>
+      </div>
+      <span class="brand-tagline dynamic-brand-subtitle">✦ Joias e Acessórios ✦</span>
+    </div>
+
+    <div class="header-actions">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Acessórios Exclusivos</span>
+      </div>
+
+      <button id="audio-toggle" class="btn-audio-toggle" title="Ativar/Desativar Efeitos de Som" aria-label="Alternar som ambiente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fluxo de Narrativa Sincronizado ao Scroll -->
+  <main class="content-flow">
+
+    <!-- SEÇÃO 1: HERO -->
+    <section class="story-section hero-section" id="hero">
+      <div class="hero-content">
+        <div class="exclusive-pill">
+          <span>✦ Joias & Acessórios ✦</span>
+        </div>
+        <h1 class="hero-title">
+          Descubra o <br>
+          <span class="gold-gradient-text">Seu Brilho</span>
+        </h1>
+        <p class="hero-description">
+          Acessórios criados para realçar a sua beleza e inspirar momentos inesquecíveis.
+          <span class="hero-credo">Brilhe como a joia preciosa que Deus te criou</span>
+        </p>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Role para Explorar</span>
+        <div class="mouse-icon"></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: DESIGN ESCULPIDO NO FUTURO -->
+    <section class="story-section section-left" id="design">
+      <article class="narrative-card">
+        <div class="card-light-beam"></div>
+        <div class="section-number">Fase 01 // Estilo</div>
+        <h2 class="card-title">Design Futurista</h2>
+        <p class="card-text">
+          Nossas peças são desenhadas com foco no futuro, combinando leveza, conforto e um visual deslumbrante que simplesmente não passa despercebido.
+        </p>
+        <div class="card-specs">
+          <div class="spec-item">
+            <span class="spec-label">Design</span>
+            <span class="spec-value">Inovador e Leve</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Visual</span>
+            <span class="spec-value">Deslumbrante</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- SEÇÃO 3: PUREZA & DISPERSÃO DE LUZ -->
+    <section class="story-section section-right" id="purity">
+      <article class="narrative-card">
+        <div class="card-light-beam"></div>
+        <div class="section-number">Fase 02 // Essência</div>
+        <h2 class="card-title">Sinta-se Radiante</h2>
+        <p class="card-text">
+          Cada detalhe é pensado para refletir a luz e trazer ainda mais energia para o seu visual. Celebre a beleza das formas geométricas perfeitas.
+        </p>
+        <div class="card-specs">
+          <div class="spec-item">
+            <span class="spec-label">Detalhes</span>
+            <span class="spec-value">Feitos com Carinho</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Energia</span>
+            <span class="spec-value">Vibrante e Positiva</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- SEÇÃO 4: ARTESANATO & EXCLUSIVIDADE -->
+    <section class="story-section section-left" id="craft">
+      <article class="narrative-card">
+        <div class="card-light-beam"></div>
+        <div class="section-number">Fase 03 // Exclusividade</div>
+        <h2 class="card-title">Feito para Você</h2>
+        <p class="card-text">
+          Acreditamos que você merece algo único. Nossa coleção traz peças exclusivas e cheias de personalidade para acompanhar o seu ritmo.
+        </p>
+        <div class="card-specs">
+          <div class="spec-item">
+            <span class="spec-label">Coleção</span>
+            <span class="spec-value">Sempre Limitada</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Atendimento</span>
+            <span class="spec-value">100% Personalizado</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- SEÇÃO 5: CALL TO ACTION (WHATSAPP CATÁLOGO) -->
+    <section class="story-section cta-section" id="catalogo">
+      <div class="cta-card">
+        <div class="cta-badge">
+          <span>Acesso Exclusivo</span>
+        </div>
+        <h2 class="cta-title">
+          O Seu Próximo <br>
+          <span class="gold-gradient-text">Acessório Favorito</span>
+        </h2>
+        <p class="cta-description">
+          Venha conhecer nossa coleção completa e conversar com a gente para encontrar a peça perfeita para o seu estilo.
+        </p>
+
+        <!-- Botão Principal de Catálogo WhatsApp -->
+        <a href="#" class="whatsapp-catalog-btn whatsapp-link-trigger" id="btn-ver-catalogo">
+          <!-- Ícone do WhatsApp -->
+          <svg class="wa-icon-svg" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.942.822 2.802.822h.001c3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.768-5.766-5.768zm3.393 8.163c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.072-.5-1.442-.598-2.39-2.039-2.464-2.137-.074-.099-.607-.808-.607-1.543s.385-1.096.522-1.246c.137-.149.301-.186.402-.186.103 0 .205.002.296.006.096.004.225-.036.352.268.131.312.448 1.093.487 1.173.04.079.066.173.013.279-.053.107-.079.173-.158.265-.079.092-.167.206-.238.277-.08.079-.163.165-.07.324.093.159.414.684.889 1.107.611.545 1.127.714 1.286.793.159.08.252.066.345-.04.093-.105.396-.462.502-.62.106-.159.211-.132.355-.079.145.053.92.434 1.078.513.158.079.264.119.303.185.04.066.04.383-.104.788zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.25c-1.636 0-3.15-.49-4.423-1.332l-.317-.208-2.964.777.791-2.89-.227-.361A8.204 8.204 0 0 1 3.75 12c0-4.549 3.701-8.25 8.25-8.25 4.549 0 8.25 3.701 8.25 8.25 0 4.549-3.701 8.25-8.25 8.25z"/>
+          </svg>
+          <span>Acessar o Catálogo</span>
+          <!-- Seta Elegante -->
+          <svg class="wa-arrow-svg" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <div class="cta-guarantee">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+          <span>Fale diretamente com nossa equipe e tire suas dúvidas!</span>
+        </div>
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="site-footer">
+        <p class="footer-copy">
+          &copy; 2026 <span class="dynamic-brand-name">Ana Brillé</span>. Todos os direitos reservados. Design Futurista & Estilo.
+        </p>
+        <div class="footer-links">
+          <a href="#" class="footer-link whatsapp-link-trigger">WhatsApp</a>
+          <a href="#hero" class="footer-link">Início</a>
+          <a href="#catalogo" class="footer-link">Catálogo</a>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Botão Flutuante Rápido de WhatsApp (Aparece ao Rolar) -->
+  <a href="#" class="floating-wa-pill whatsapp-link-trigger" id="floating-wa-pill" title="Acessar Catálogo no WhatsApp">
+    <span class="floating-wa-dot"></span>
+    <span>Catálogo Exclusivo</span>
+  </a>
+
+  <!-- Seletor Elegante de Anel 3D e Acabamentos -->
+  <aside class="ring-customizer-bar" id="ring-customizer" aria-label="Personalizador 3D">
+    <div class="customizer-group">
+      <span class="customizer-label">Modelo:</span>
+      <button class="customizer-btn active" data-model="royale" id="btn-model-royale">Pavé Royale</button>
+      <button class="customizer-btn" data-model="pear" id="btn-model-pear">Pear Solitaire</button>
+    </div>
+    <div class="customizer-divider"></div>
+    <div class="customizer-group">
+      <span class="customizer-label">Metal:</span>
+      <button class="color-dot active" data-metal="gold" title="Ouro 18K" aria-label="Ouro 18K" style="background: linear-gradient(135deg, #ffe082, #d4af37, #996515);"></button>
+      <button class="color-dot" data-metal="rose" title="Ouro Rosé" aria-label="Ouro Rosé" style="background: linear-gradient(135deg, #fbc4ab, #e29578, #b06d57);"></button>
+      <button class="color-dot" data-metal="silver" title="Prata / Platina" aria-label="Prata / Platina" style="background: linear-gradient(135deg, #ffffff, #d0d7de, #8c959f);"></button>
+    </div>
+  </aside>
+
+  <!-- Dependências 3D: Three.js e Loaders Locais -->
+  <script src="js/three.min.js"></script>
+  <script src="js/DRACOLoader.js"></script>
+  <script src="js/GLTFLoader.js"></script>
+  <script src="js/RGBELoader.js"></script>
+
+  <!-- Modelos 3D Pré-carregados (Suporte total a file:/// e Offline) -->
+  <script src="js/models_data.js"></script>
+
+  <!-- Scripts da Aplicação -->
+  <script src="js/config.js"></script>
+  <script src="js/scene3d.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
